@@ -615,7 +615,7 @@ local function parse_angle_addr(field)
         return nil
     end
     if string.sub(rest, 1, 1) ~= ">" then
-        parse_log("Error on parse_angle_addr: ">" is not found after addr-spec", field)
+        parse_log("Error on parse_angle_addr: \034>\034 is not found after addr-spec", field)
         return nil
     end
     rest = skip_cfws(string.sub(rest, 2))
